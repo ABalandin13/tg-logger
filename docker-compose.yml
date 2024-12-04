@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    restart: on-failure
+    container_name: communication
+    depends_on:
+      - db
+    volumes:
+      - ./:/app
+    networks:
+      - app-network
+    environment:
+      - DATABASE_URL=postgresql://postgres:12345678@postgres_db:5432/communication
+
+
+  db:
+    image: postgres:13
+    container_name: postgres_db
+    restart: always
+    ports:
+      - 5432
+      - '4010:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 12345678
+      POSTGRES_DB: communication
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  postgres_data:

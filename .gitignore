@@ -1,0 +1,51 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/
+*.log
+*.sqlite3
+
+# Virtual Environments
+env/
+venv/
+.venv/
+
+# Environment Variables
+.env
+*.env
+
+# Docker
+docker-compose.override.yml
+docker-compose.override.yaml
+docker-compose.override.*
+docker_data/
+postgres_data/
+**/Dockerfile~
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# MacOS
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Byte-compiled files
+*.class
+*.swp
+*.swo
+*.bak
+
+# Node.js (if applicable)
+node_modules/
+
+# System files
+Thumbs.db
+
+#Sessions
+*.session
