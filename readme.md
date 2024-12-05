@@ -33,22 +33,24 @@ Setup Instructions
 	Replace <your_api_id> and <your_api_hash> with your Telegram API credentials.
 
 2.	Build and Start the Project:
-		Use the Makefile commands to initialize and run the project:
+	Use the Makefile commands to initialize and run the project:
 	
-	# Build Docker containers
-	make build
+   		Build Docker containers
+
+		make build
 	
-	# Start Docker containers
-	make up
+   		Start Docker containers
+  	
+   		make up
 
 
-3.	Access the Application:
+4.	Access the Application:
 
 	The app will start and listen for new users and Telegram events. Logs will be displayed in the terminal.
 	
-4.	Stop the Project:
+5.	Stop the Project:
 	
-    make down
+    	make down
 
 Database Management
 
